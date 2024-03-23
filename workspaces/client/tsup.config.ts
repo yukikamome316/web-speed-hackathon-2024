@@ -53,7 +53,7 @@ export default defineConfig(async (): Promise<Options[]> => {
         '.json?file': 'file',
         '.wasm': 'binary',
       },
-      metafile: true,
+      // metafile: true,
       minify: true,
       outDir: OUTPUT_DIR,
       platform: 'browser',
@@ -61,7 +61,7 @@ export default defineConfig(async (): Promise<Options[]> => {
       sourcemap: 'inline',
       splitting: true,
       target: ['es2022'],
-      treeshake: false,
+      // treeshake: false,
     },
   ];
 });
