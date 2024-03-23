@@ -3,8 +3,15 @@ type Params = {
   target: string;
 };
 
+function toHiragana(str: string): string {
+  return str.replace(/[\u30a1-\u30f6]/g, function(match) {
+    const chr = match.charCodeAt(0) - 0x60;
+    return String.fromCharCode(chr);
+  });
+}
+
 function normalizeString(str: string): string {
-  return str.normalize('NFKC').toLowerCase();
+  return toHiragana(str.normalize('NFKC')).toLowerCase();
 }
 
 export function isContains({ query, target }: Params): boolean {
