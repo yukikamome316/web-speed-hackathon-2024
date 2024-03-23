@@ -5,7 +5,7 @@ import type { GetReleaseResponse } from '@wsh-2024/schema/src/api/releases/GetRe
 
 import type { DomainSpecificApiClientInterface } from '../../../lib/api/DomainSpecificApiClientInterface';
 import { apiClient } from '../../../lib/api/apiClient';
-
+``
 type ReleaseApiClient = DomainSpecificApiClientInterface<{
   fetch: [{ params: GetReleaseRequestParams }, GetReleaseResponse];
 }>;
